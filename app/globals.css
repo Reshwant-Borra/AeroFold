@@ -24,7 +24,9 @@ html {
 
 body {
   color: var(--color-text-primary);
-  background: var(--color-background);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 55%),
+    var(--color-background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -49,4 +51,3 @@ body {
     scroll-behavior: auto !important;
   }
 }
-

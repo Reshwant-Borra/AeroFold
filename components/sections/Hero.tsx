@@ -2,38 +2,50 @@
 
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/motion/Reveal';
+import { MediaPlaceholder } from '@/components/ui/MediaPlaceholder';
+import { content } from '@/lib/content';
 
 export function Hero() {
+  const { hero } = content.overview;
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-background to-surface/50">
-      <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-10">
-        [PLACEHOLDER: Hero background image/video]
-      </div>
-      <div className="relative max-w-container mx-auto px-6 text-center z-10">
-        <Reveal>
-          <h1 className="text-h1 text-text-primary mb-6">
-            AeroFold: Sustainable Deorbiting for CubeSats
-          </h1>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <p className="text-h3 text-text-secondary mb-8 max-w-3xl mx-auto">
-            An origami-inspired drag sail that fits inside a CubeSat and uses
-            shape-memory alloy to deploy at end-of-life, deorbiting satellites
-            within a year instead of decades.
-          </p>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <div className="flex gap-4 justify-center">
-            <Button href="#quick-facts" variant="primary">
-              Learn More
-            </Button>
-            <Button href="/contact" variant="outline">
-              Contact Us
-            </Button>
+    <section className="relative py-section-y bg-gradient-to-b from-background via-background to-surface/60">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
+      <div className="relative max-w-container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+          <div>
+            <Reveal>
+              <p className="text-small uppercase tracking-[0.4em] text-accent mb-4">
+                {content.brand.name}
+              </p>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <h1 className="text-h1 text-text-primary mb-6">{hero.title}</h1>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <p className="text-body text-text-secondary mb-8 max-w-xl">
+                {hero.subtitle}
+              </p>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <div className="flex flex-wrap gap-4">
+                <Button href={hero.primaryCta.href} variant="primary">
+                  {hero.primaryCta.label}
+                </Button>
+                <Button href={hero.secondaryCta.href} variant="outline">
+                  {hero.secondaryCta.label}
+                </Button>
+              </div>
+            </Reveal>
           </div>
-        </Reveal>
+          <Reveal delay={0.12}>
+            <MediaPlaceholder
+              label={hero.media}
+              className="aspect-[4/3] w-full"
+            />
+          </Reveal>
+        </div>
       </div>
     </section>
   );
 }
-

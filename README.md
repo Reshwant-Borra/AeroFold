@@ -104,7 +104,7 @@ The website is designed to meet the Conrad Challenge rubric requirements. See `l
 1. Replace all `[PLACEHOLDER]` tags with actual content
 2. Add brand colors to CSS variables
 3. Upload images to `public/images/`
-4. Update team information in `lib/site.ts`
+4. Update team information in `lib/content.ts`
 5. Add final copy from Innovation Brief and Video Script
 6. Test on target viewports (1440×900, 1280×800)
 7. Run rubric self-assessment
@@ -112,4 +112,3 @@ The website is designed to meet the Conrad Challenge rubric requirements. See `l
 ## License
 
 [PLACEHOLDER: Add license information]
-

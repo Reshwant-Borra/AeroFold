@@ -2,20 +2,9 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/problem', label: 'Problem' },
-  { href: '/solution', label: 'Solution' },
-  { href: '/how-it-works', label: 'How It Works' },
-  { href: '/prototype', label: 'Prototype' },
-  { href: '/impact', label: 'Impact' },
-  { href: '/market', label: 'Market' },
-  { href: '/team', label: 'Team' },
-  { href: '/updates', label: 'Updates' },
-  { href: '/contact', label: 'Contact' },
-];
+import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/Button';
+import { content } from '@/lib/content';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -38,35 +27,39 @@ export function SiteHeader() {
       }`}
     >
       <nav className="max-w-container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-8">
           <Link
             href="/"
             className="text-h3 font-bold text-text-primary hover:text-accent transition-colors"
           >
-            [PLACEHOLDER: AeroFold Logo]
+            {content.brand.logo}
           </Link>
-          <ul className="flex items-center gap-6">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className={`text-small font-medium transition-colors ${
-                      isActive
-                        ? 'text-accent'
-                        : 'text-text-secondary hover:text-text-primary'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <div className="flex items-center gap-6">
+            <ul className="hidden md:flex items-center gap-6">
+              {content.nav.links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`text-small font-medium transition-colors ${
+                        isActive
+                          ? 'text-accent'
+                          : 'text-text-secondary hover:text-text-primary'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <Button href={content.nav.contactHref} variant="outline">
+              {content.nav.contactLabel}
+            </Button>
+          </div>
         </div>
       </nav>
     </header>
   );
 }
-
