@@ -5,9 +5,8 @@ import { MotionProvider } from '@/components/motion/MotionProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'AeroFold - Sustainable Deorbiting for CubeSats',
-  description:
-    'An origami-inspired drag sail that fits inside a CubeSat and uses shape-memory alloy to deploy at end-of-life, deorbiting satellites within a year instead of decades.',
+  title: 'Conrad | [PLACEHOLDER: Product title]',
+  description: '[PLACEHOLDER: Conrad meta description]',
 };
 
 export default function RootLayout({
@@ -27,4 +26,3 @@ export default function RootLayout({
     </html>
   );
 }
-

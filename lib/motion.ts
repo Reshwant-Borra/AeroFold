@@ -3,12 +3,12 @@
 export const EASE = [0.22, 1, 0.36, 1] as const;
 export const DURATION = {
   fast: 0.18,
-  medium: 0.32,
-  slow: 0.52,
+  medium: 0.28,
+  slow: 0.45,
 } as const;
 export const DISTANCE = {
   small: 8,
-  base: 16,
+  base: 12,
   large: 24,
 } as const;
 
@@ -104,20 +104,17 @@ export const staggerContainer = {
 // Page transition variants
 export const pageTransition = {
   initial: { 
-    opacity: 0, 
-    x: 16,
+    opacity: 0,
   },
   animate: { 
-    opacity: 1, 
-    x: 0,
+    opacity: 1,
     transition: { 
       duration: DURATION.medium, 
       ease: EASE,
     },
   },
   exit: { 
-    opacity: 0, 
-    x: -16,
+    opacity: 0,
     transition: { 
       duration: DURATION.fast, 
       ease: EASE,
@@ -143,4 +140,3 @@ export const buttonHover = {
     ease: EASE,
   },
 };
-

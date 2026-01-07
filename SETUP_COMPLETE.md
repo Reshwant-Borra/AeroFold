@@ -57,7 +57,7 @@ All pages created in `app/(site)/`:
 - `/contact` - Contact page
 
 ### ✅ Content Management
-- `lib/site.ts` - Structured placeholder content
+- `lib/content.ts` - Structured placeholder content
 - `lib/rubric.ts` - Scoring rubric with assessment functions
 
 ## Next Steps
@@ -76,7 +76,7 @@ All pages created in `app/(site)/`:
    - Update brand colors in `app/globals.css`
    - Add images to `public/images/`
    - Replace `[PLACEHOLDER]` text with actual content from Google Docs
-   - Update team information in `lib/site.ts`
+   - Update team information in `lib/content.ts`
    - Add metrics and statistics
 
 4. **Test & Validate**
@@ -114,4 +114,3 @@ The website is designed to meet all Conrad Challenge rubric requirements:
 - All animations respect `prefers-reduced-motion`
 - Focus states are implemented for accessibility
 - The site is ready for content integration
-
