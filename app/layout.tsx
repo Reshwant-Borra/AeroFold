@@ -5,8 +5,8 @@ import { MotionProvider } from '@/components/motion/MotionProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Conrad | [PLACEHOLDER: Product title]',
-  description: '[PLACEHOLDER: Conrad meta description]',
+  title: 'AeroFold | [PLACEHOLDER: Product title]',
+  description: '[PLACEHOLDER: AeroFold meta description]',
 };
 
 export default function RootLayout({

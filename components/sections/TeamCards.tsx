@@ -15,7 +15,7 @@ export function TeamCards() {
           <h3 className="text-body font-semibold text-text-primary mb-1">
             {member.name}
           </h3>
-          <p className="text-small text-accent mb-3">{member.role}</p>
+          <p className="text-small text-primary mb-3">{member.role}</p>
           <p className="text-small text-text-secondary">{member.bio}</p>
         </Card>
       ))}

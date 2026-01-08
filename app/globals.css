@@ -3,13 +3,49 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #4F46E5;        /* [PLACEHOLDER: primary colour] */
-  --color-secondary: #22D3EE;      /* [PLACEHOLDER: secondary colour] */
-  --color-background: #0A0A23;     /* dark background */
-  --color-surface: #111827;        /* card background */
-  --color-accent: #FBBF24;         /* [PLACEHOLDER: accent colour] */
-  --color-text-primary: #F9FAFB;
-  --color-text-secondary: #D1D5DB;
+  /* Primary Brand Colors (Extracted from Logo) */
+  --color-primary: #15244D;              /* Dark navy blue from logo design */
+  --color-primary-light: #62719A;         /* Medium blue from logo */
+  --color-primary-lighter: #CBD5F0;        /* Light blue/lavender from logo */
+  --color-primary-dark: #0F1A33;         /* Darker variant for depth */
+  
+  /* Secondary Colors (Derived from Logo) */
+  --color-secondary: #62719A;              /* Medium blue accent */
+  --color-secondary-light: #CBD5F0;       /* Light blue accent */
+  --color-secondary-dark: #4A5678;         /* Darker blue accent */
+  
+  /* Accent Colors (Complementary to Logo) */
+  --color-accent: #CBD5F0;                /* Light blue from logo - for highlights */
+  --color-accent-light: #E8ECF7;          /* Very light blue */
+  --color-accent-dark: #62719A;           /* Medium blue for contrast */
+  
+  /* Neutral Colors (From Logo) */
+  --color-white: #FFFFFF;                 /* White background from logo */
+  --color-black: #000000;                 /* Pure black */
+  
+  /* Background Colors (Light Theme - White) */
+  --color-background: #FFFFFF;            /* White background */
+  --color-background-alt: #F9FAFB;        /* Slightly off-white */
+  --color-surface: #F3F4F6;                /* Light gray card/surface background */
+  --color-surface-elevated: #E5E7EB;      /* Elevated surfaces */
+  --color-surface-hover: #E5E7EB;         /* Hover states */
+  
+  /* Text Colors (For White Background) */
+  --color-text-primary: #15244D;          /* Headings, important text (dark navy) */
+  --color-text-secondary: #374151;         /* Body text (dark gray) */
+  --color-text-tertiary: #6B7280;          /* Muted text (medium gray) */
+  --color-text-inverse: #FFFFFF;          /* Text on dark backgrounds (white) */
+  
+  /* Status Colors */
+  --color-success: #10B981;                /* Success states */
+  --color-warning: #F59E0B;                /* Warnings */
+  --color-error: #EF4444;                 /* Errors */
+  --color-info: #62719A;                  /* Info (uses logo blue) */
+  
+  /* Border Colors */
+  --color-border: rgba(98, 113, 154, 0.2);      /* Subtle blue borders */
+  --color-border-hover: rgba(98, 113, 154, 0.4); /* Hover borders */
+  --color-border-focus: #CBD5F0;                /* Focus borders (light blue) */
 }
 
 * {
@@ -25,7 +61,7 @@ html {
 body {
   color: var(--color-text-primary);
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 55%),
+    radial-gradient(circle at top, rgba(98, 113, 154, 0.05), transparent 55%),
     var(--color-background);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -36,7 +72,7 @@ body {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

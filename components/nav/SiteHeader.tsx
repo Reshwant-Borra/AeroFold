@@ -22,17 +22,17 @@ export function SiteHeader() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-sm shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-sm shadow-md border-b border-surface'
+          : 'bg-white/80 backdrop-blur-sm'
       }`}
     >
       <nav className="max-w-container mx-auto px-6 py-4">
         <div className="flex items-center justify-between gap-8">
           <Link
             href="/"
-            className="text-h3 font-bold text-text-primary hover:text-accent transition-colors"
+            className="text-h3 font-bold text-text-primary hover:text-primary transition-colors"
           >
-            {content.brand.logo}
+            {content.brand.name}
           </Link>
           <div className="flex items-center gap-6">
             <ul className="hidden md:flex items-center gap-6">
@@ -44,8 +44,8 @@ export function SiteHeader() {
                       href={link.href}
                       className={`text-small font-medium transition-colors ${
                         isActive
-                          ? 'text-accent'
-                          : 'text-text-secondary hover:text-text-primary'
+                          ? 'text-primary'
+                          : 'text-text-secondary hover:text-primary'
                       }`}
                     >
                       {link.label}

@@ -1,6 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -47,6 +49,26 @@ export function Hero() {
           </div>
         )}
       </div>
+
+      {/* Logo overlay - top left (Option 2) */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+        className="absolute top-6 left-6 z-20 md:top-8 md:left-8"
+      >
+        <div className="relative w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+          {/* Subtle background for better visibility */}
+          <div className="absolute inset-0 bg-black/20 backdrop-blur-sm rounded-lg -z-10" />
+          <Image
+            src="/images/logo.jpg"
+            alt="AeroFold logo"
+            fill
+            className="object-contain drop-shadow-2xl"
+            priority
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }

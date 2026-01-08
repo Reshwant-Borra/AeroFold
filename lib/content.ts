@@ -1,8 +1,8 @@
 export const content = {
   brand: {
-    name: 'Conrad',
-    logo: '[PLACEHOLDER: Conrad logo]',
-    tagline: '[PLACEHOLDER: Conrad one-line product descriptor]',
+    name: 'AeroFold',
+    logo: '[PLACEHOLDER: AeroFold logo]',
+    tagline: '[PLACEHOLDER: AeroFold one-line product descriptor]',
     colors: [
       '[PLACEHOLDER: Primary color name]',
       '[PLACEHOLDER: Accent color name]',
@@ -21,9 +21,9 @@ export const content = {
   },
   overview: {
     hero: {
-      title: '[PLACEHOLDER: Conrad headline]',
+      title: '[PLACEHOLDER: AeroFold headline]',
       subtitle:
-        '[PLACEHOLDER: One-sentence summary of Conrad and the innovation]',
+        '[PLACEHOLDER: One-sentence summary of AeroFold and the innovation]',
       primaryCta: { label: 'Explore Technology', href: '/technology' },
       secondaryCta: { label: 'View Proof', href: '/proof' },
       media: '[PLACEHOLDER: CAD hero render]',
@@ -32,12 +32,12 @@ export const content = {
       {
         title: '[PLACEHOLDER: Problem]',
         description:
-          '[PLACEHOLDER: The urgent problem Conrad addresses in one sentence]',
+          '[PLACEHOLDER: The urgent problem AeroFold addresses in one sentence]',
       },
       {
         title: '[PLACEHOLDER: Solution]',
         description:
-          '[PLACEHOLDER: How Conrad solves the problem at a high level]',
+          '[PLACEHOLDER: How AeroFold solves the problem at a high level]',
       },
       {
         title: '[PLACEHOLDER: Status]',
@@ -47,18 +47,18 @@ export const content = {
     ],
     whyMatters: {
       title: 'Why this matters',
-      body: '[PLACEHOLDER: Short statement on the intended impact of Conrad]',
+      body: '[PLACEHOLDER: Short statement on the intended impact of AeroFold]',
     },
     model: {
       title: 'Model & form factor',
       body:
-        '[PLACEHOLDER: Brief description of the Conrad model, dimensions, or configuration]',
+        '[PLACEHOLDER: Brief description of the AeroFold model, dimensions, or configuration]',
       media: '[PLACEHOLDER: Model render or diagram]',
     },
     howItWorks: {
       title: 'How it works',
       subtitle:
-        '[PLACEHOLDER: Short preview of Conrad deployment flow in four steps]',
+        '[PLACEHOLDER: Short preview of AeroFold deployment flow in four steps]',
       steps: [
         {
           title: 'Stowed',
@@ -90,10 +90,10 @@ export const content = {
     brand: {
       title: 'Brand',
       body:
-        '[PLACEHOLDER: Brand positioning and identity notes for Conrad]',
+        '[PLACEHOLDER: Brand positioning and identity notes for AeroFold]',
     },
     cta: {
-      title: '[PLACEHOLDER: Ready to review Conrad in detail?]',
+      title: '[PLACEHOLDER: Ready to review AeroFold in detail?]',
       subtitle: '[PLACEHOLDER: Direct the reviewer to technology details and proof]',
       primary: { label: 'Visit Technology', href: '/technology' },
       secondary: { label: 'View Proof', href: '/proof' },

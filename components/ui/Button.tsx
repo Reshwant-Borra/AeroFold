@@ -26,8 +26,8 @@ export function Button({
     'inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium text-body transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2';
 
   const variantClasses = {
-    primary: 'bg-primary text-white hover:bg-primary/90',
-    secondary: 'bg-secondary text-background hover:bg-secondary/90',
+    primary: 'bg-primary text-white hover:bg-primary-dark',
+    secondary: 'bg-secondary-light text-primary hover:bg-secondary',
     outline:
       'border-2 border-primary text-primary hover:bg-primary hover:text-white',
   };

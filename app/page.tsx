@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Hero } from '@/components/sections/Hero';
 import { QuickFacts } from '@/components/sections/QuickFacts';
 import { PageTransition } from '@/components/motion/PageTransition';
@@ -80,12 +81,24 @@ export default function Home() {
             />
           </Reveal>
           <div className="rounded-card border border-surface/60 bg-surface/60 p-6">
-            <h3 className="text-h3 text-text-primary mb-3">
-              {content.overview.brand.title}
-            </h3>
-            <p className="text-body text-text-secondary">
-              {content.overview.brand.body}
-            </p>
+            <div className="flex items-start gap-6 mb-4">
+              <div className="relative w-24 h-24 flex-shrink-0">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="AeroFold logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-h3 text-text-primary mb-3">
+                  {content.overview.brand.title}
+                </h3>
+                <p className="text-body text-text-secondary">
+                  {content.overview.brand.body}
+                </p>
+              </div>
+            </div>
             <div className="flex flex-wrap gap-3 mt-4">
               {content.brand.colors.map((color) => (
                 <span
